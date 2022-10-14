@@ -1,0 +1,32 @@
+﻿@model  ITMO._2022.ASP.net.MVC.Exam.Models.Student
+
+
+
+@{
+    ViewBag.Title = "BestStudents";
+}
+
+<br>
+<br>
+<h2>Список лучших студенты</h2>
+
+<table>
+
+
+    @foreach (var c in ViewBag.Students)
+    {
+        <tr>
+            <td><p>@c</p></td>
+        </tr>
+    }
+</table>
+
+<div>
+    <p>
+        @Html.ActionLink("Внести новые данные студента", "InputData")
+    </p>
+    <p>
+        @Html.ActionLink("Список студентов", "OutputData")
+    </p>
+</div>
+

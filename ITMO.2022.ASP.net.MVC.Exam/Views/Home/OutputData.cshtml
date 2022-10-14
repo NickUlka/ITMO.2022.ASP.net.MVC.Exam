@@ -1,0 +1,32 @@
+﻿@model ITMO._2022.ASP.net.MVC.Exam.Models.Student
+
+
+@{
+    ViewBag.Title = "OutputData";
+}
+<br>
+<br>
+<h2>Таблица студентов</h2>
+
+<table class="table">
+    <tr>
+        <td><p>Имя</p></td>
+        <td><p> Фамилия</p></td>
+        <td><p> Сумма баллов</p></td>
+    </tr>
+    @foreach (var c in ViewBag.Students)
+    {
+        <tr>
+            <td><p>@c.Name</p></td>
+            <td><p>@c.Surname</p></td>
+            <td><p>@c.Sum</p></td>
+        </tr>
+    }
+</table>
+
+<div>
+    <p>
+        @Html.ActionLink("Введите данные студента", "InputData")
+    </p>
+</div>
+

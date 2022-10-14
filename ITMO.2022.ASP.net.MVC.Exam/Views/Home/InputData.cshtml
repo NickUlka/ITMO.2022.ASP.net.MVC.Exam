@@ -1,0 +1,83 @@
+﻿@model ITMO._2022.ASP.net.MVC.Exam.Models.Student
+
+@{
+    ViewBag.Title = "InputData";
+}
+
+
+<h2>Ввод данных</h2>
+<div>
+    <form method="post">
+
+
+        <table class="table">
+            <tr>
+                <td><p>Имя студента:</p></td>
+                <td><input type="text" name="Name" />     @Html.ValidationMessageFor(model => model.Name)</td>
+            </tr>
+            <tr>
+                <td><p>Фамилия студента:</p></td>
+                <td><input type="text" name="Surname" />   @Html.ValidationMessageFor(model => model.Surname) </td>
+            </tr>
+            <tr>
+                <td><p>Промежуточные оценки:</p></td>
+                <td>
+                    <select name="Mark1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <select name="Mark2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <select name="Mark3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <select name="Mark4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <select name="Mark5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить" />
+                </td>
+                <td>
+                    @Html.ActionLink("Cписок студентов", "OutputData")
+                </td>
+
+
+            </tr>
+        </table>
+    </form>
+
+
+</div>
+
+
+
